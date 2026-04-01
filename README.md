@@ -8,7 +8,7 @@
 
 ```bash
 # 1. 레포 클론
-git clone https://github.com/YOUR_USERNAME/nerdmath-FE-homework.git
+git clone https://github.com/NERDMATH-TEAM/nerdmath-FE-homework.git
 cd nerdmath-FE-homework
 
 # 2. dev 브랜치로 이동
