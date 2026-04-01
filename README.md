@@ -19,18 +19,33 @@ git checkout dev
 
 ## 과제 제출 방법
 
-### 1단계: 브랜치 만들기
+### 1단계: 이슈 확인
+
+GitHub Issues 탭에서 본인에게 할당된 이슈를 확인합니다.
+
+```
+예시: #1 [Week1] JavaScript 기초 과제
+```
+
+### 2단계: 이슈 브랜치 만들기
+
+이슈 번호와 내용을 기반으로 브랜치를 생성합니다.
 
 ```bash
 # dev 브랜치 최신화
 git checkout dev
 git pull origin dev
 
-# 과제 브랜치 생성
-git checkout -b feature/week1
+# 이슈 기반 브랜치 생성 (이슈번호-설명 형태)
+git checkout -b feat/1-week1-js-basics
 ```
 
-### 2단계: 과제 풀기
+> **브랜치 네이밍 규칙**: `feat/이슈번호-간단한설명`
+> - `feat/1-week1-js-basics`
+> - `feat/2-week2-react-state`
+> - `fix/3-arrow-function-bug`
+
+### 3단계: 과제 풀기
 
 `week1/` 폴더의 `.js` 파일을 열고 주석의 지시에 따라 코드를 작성합니다.
 
@@ -41,7 +56,7 @@ node week1/callback-practice.js
 node week1/predict-output.js
 ```
 
-### 3단계: 커밋 & 푸시
+### 4단계: 커밋 & 푸시
 
 ```bash
 # 변경 파일 확인
@@ -49,25 +64,29 @@ git status
 
 # 파일 추가 + 커밋
 git add week1/
-git commit -m "week1: 과제 완료"
+git commit -m "feat: week1 과제 완료 (#1)"
 
 # 원격에 푸시
-git push origin feature/week1
+git push origin feat/1-week1-js-basics
 ```
 
-### 4단계: PR 생성
+> **커밋 메시지에 `(#1)`을 넣으면** GitHub에서 이슈 링크가 자동 생성됩니다.
 
-```bash
-# GitHub에서 PR 생성 (dev 브랜치로)
-# 아래 명령어 또는 GitHub 웹사이트에서 직접 생성
-gh pr create --base dev --title "Week1 과제 제출" --body "Closes #1"
-```
+### 5단계: PR 생성
 
-또는 GitHub 웹사이트에서:
+GitHub 웹사이트에서:
 1. 레포 페이지 → `Pull requests` 탭 → `New pull request`
-2. base: `dev` ← compare: `feature/week1`
-3. 제목: `Week1 과제 제출`
-4. 본문: `Closes #1`
+2. base: `dev` ← compare: `feat/1-week1-js-basics`
+3. 제목: `feat: Week1 JavaScript 기초 과제 (#1)`
+4. 본문에 아래 내용 작성:
+```
+Closes #1
+
+## 체크리스트
+- [ ] arrow-functions.js 완료
+- [ ] callback-practice.js 완료
+- [ ] predict-output.js 완료
+```
 5. `Create pull request` 클릭
 
 > `Closes #1`을 적으면 PR이 머지될 때 이슈가 자동으로 닫힙니다.
