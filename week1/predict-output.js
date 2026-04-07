@@ -8,7 +8,7 @@
 
 // --- 문제 1: Truthy/Falsy ---
 // 아래 코드에서 어떤 알파벳이 출력될지 예측하세요.
-// 예측: (여기에 적으세요)
+// 예측: B,D,G
 
 if ("") console.log("A");
 if ("hello") console.log("B");
@@ -20,10 +20,9 @@ if (42) console.log("G");
 
 // --- 문제 2: 콜백 실행 순서 ---
 // 아래 코드의 출력 순서를 예측하세요.
-// 예측: (여기에 적으세요)
+// 예측: 시작, 중간, 끝
 
 console.log("\n=== 실행 순서 ===");
-
 function outer(cb) {
   console.log("시작");
   cb();
