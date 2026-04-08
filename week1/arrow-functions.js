@@ -11,24 +11,22 @@ function add(a, b) {
   return a + b;
 }
 
-// 여기에 화살표 함수로 바꿔서 작성하세요:
-// const add = ...
+const add = (a, b) => a + b;
 
 // --- 문제 2 ---
 function greet(name) {
   return "안녕, " + name + "!";
 }
 
-// 여기에 화살표 함수로 바꿔서 작성하세요:
-// const greet = ...
+const greet = name => "안녕, " + name + "!";
 
 // --- 문제 3 ---
 function isEven(num) {
   return num % 2 === 0;
 }
 
-// 여기에 화살표 함수로 바꿔서 작성하세요:
-// const isEven = ...
+const isEven = num => num%2==0;
+
 
 // --- 테스트 (수정하지 마세요) ---
 console.log("=== 테스트 ===");

@@ -15,11 +15,13 @@ function repeat(count, callback) {
 // --- 요구사항 A ---
 // 1~5의 제곱을 출력하세요: 1, 4, 9, 16, 25
 console.log("=== 요구사항 A: 제곱 ===");
-// 여기에 repeat 호출 코드를 작성하세요:
-
+repeat(5, function(idx) {
+  console.log(idx ** 2);
+});
 
 // --- 요구사항 B ---
 // "1번 학생", "2번 학생", ..., "5번 학생" 을 출력하세요
 console.log("\n=== 요구사항 B: 학생 ===");
 // 여기에 repeat 호출 코드를 작성하세요:
+repeat(5, (idx) => console.log(`${idx}번 학생`));
 
